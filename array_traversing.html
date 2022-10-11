@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Array Traversing</title>
+    <script>
+        let data = [9,45,3,5,7,8,9];
+        for(let i = 0;i<data.length;i++){
+            document.write(`Array ${i} is ${data[i]} <br>`)
+        }
+
+        let x = prompt('')
+        document.write(`Postion at ${data[x]}`);
+        function getonclick(){
+            let el = document.getElementById('element').value
+            if(el<data.length && typeof parseInt === "number"){ // This to make sure data should be number not alphabet 
+                
+                alert(data[el])
+
+            }else {
+                alert('outof range')
+            }
+            
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="element" />
+    <button onclick="getonclick()">Get Element</button>
+</body>
+</html>

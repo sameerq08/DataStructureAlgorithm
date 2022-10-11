@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Array Insert Elements</title>
+    <script>
+        function insertEl(){
+            let data = [60,90,34,50,89];
+            let newEl = document.getElementById('newEl').value;
+            newEl = parseInt(newEl)
+            let position= document.getElementById('position').value;
+            for(let i=data.length-1;i>0;i--){
+                
+                if(i>=position){
+                    data[i+1]=data[i];
+                    if(i==position){
+                        data[i]=newEl;
+                    }
+                }    
+            }
+        console.warn(data)
+        }
+//This whole process we can do it through splice(postion, if delete true or 0 no delete, replace value )
+    </script>
+</head>
+<body>
+    <input type="text" id="newEl" placeholder="Type Element" />
+    <input type="text" id="position" placeholder="Type Postion"/>
+    <button onclick="insertEl()">Insert</button>
+    
+    
+</body>
+</html>
